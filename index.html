@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visão Computacional</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Visão Computacional</h1>
+            <h2>Identificador de equinos</h2>
+            <p>Powered by Teachable Machine</p>
+        </header>
+        
+        <div class="controls">
+            <label class="custom-file-upload">
+                <input type="file" id="image-picker" accept="image/*" onchange="handleImageUpload(event)" style="display: none;"/>
+                Utilizar imagem do computador
+            </label>
+        </div>
+        
+        <div class="main-content">
+            <div id="image-container">
+                <img id="preview-image" alt="Image preview" style="display: none;" />
+            </div>
+            <div id="label-container">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
